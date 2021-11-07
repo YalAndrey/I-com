@@ -2,16 +2,16 @@
 {% block contend %}
 {% load static %}
 <h1 class="display-1" style="position: relative; left:10%"> Что это за сайт и кто его создал?</h1>
-<p class="text-muted" style="position: relative; left:30%"> Этот сайт был создан Андреем Малявиным как проба его <br>
-    способностей в создание сайтов на языке Python при помощи <br>
+<p class="text-muted" style="position: relative; left:30%"> Этот сайт был создан Андреем Малявиным, как проба его <br>
+    способностей в создании сайтов на языке Python при помощи <br>
     Django. На этом сайте я собираюсь записывать видеоигры, <br>
-    Комиксы, Радео технику и другие мои развлечения. </p>
+    комиксы, радио-технику и другие мои развлечения. </p>
     <div class="card" style="width: 200px; height: 400px; position: relative; left: 10%; top: 10px">
       <img class="card-img-top" src="{% static 'Isite/img/comics.jpg'%}" style="width: 200px; height:100px " alt="Card image cap">
       <div class="card-body">
         <h4 class="card-title">Комиксы</h4>
         <p class="card-text">
-          В этом отделе я рассказываю о комиксах которые я читал и делюсь своим мнением
+          В этом отделе я рассказываю о комиксах, которые я читал, и делюсь своим мнением
         </p>
         <a href="{% url 'comics' %}" class="btn btn-primary">Перейти</a>
       </div>
