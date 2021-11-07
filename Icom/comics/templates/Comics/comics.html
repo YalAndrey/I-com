@@ -1,0 +1,9 @@
+{% extends 'Isite/base.html' %}
+{% block contend %}
+{% load static %}
+    {% for i in com %}
+    <img src="{{ i.image_one.url }}">
+    {% endfor %}
+
+
+{% endblock %}
