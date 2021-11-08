@@ -5,7 +5,8 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.comics, name='comics')
+    path('', views.comics, name='comics'),
+    path('/number/<int:num>', views.number, name='number')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
