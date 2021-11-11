@@ -6,16 +6,50 @@
     способностей в создании сайтов на языке Python при помощи <br>
     Django. На этом сайте я собираюсь записывать видеоигры, <br>
     комиксы, радио-технику и другие мои развлечения. </p>
-    <div class="card" style="width: 200px; height: 400px; position: relative; left: 10%; top: 10px">
-      <img class="card-img-top" src="{% static 'Isite/img/comics.jpg'%}" style="width: 200px; height:100px " alt="Card image cap">
+ <div style="    grid-gap: 1px;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);">
+    <div class="card" style="width: 220px; height:540px; position: relative; left: 10%; top: 20px">
+      <img class="card-img-top" src="https://i.gifer.com/fzJh.gif" style="width: 220px; height:400px" alt="Card image cap">
       <div class="card-body">
         <h4 class="card-title">Комиксы</h4>
         <p class="card-text">
           В этом отделе я рассказываю о комиксах, которые я читал, и делюсь своим мнением
         </p>
-        <a href="{% url 'comics' %}" class="btn btn-primary">Перейти</a>
+        <a href="{% url 'comics' %}"  style="position: relative; "  class="btn btn-primary">Перейти</a>
       </div>
     </div>
+    <div class="card" style="width: 300px; height: 540px; position: relative; left: 20%; top: 20px">
+      <img class="card-img-top" src="https://i.gifer.com/77C3.gif" style="width: 300px; height:320px " alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title">Видеоигры</h4>
+        <p class="card-text">
+          В этом отделе я рассказываю о видеоиграх, которые я играл, и делюсь своим мнением
+        </p>
+        <a href="{% url 'comics' %}" style="position: relative; top: 10px;" class="btn btn-primary">Перейти</a>
+      </div>
+    </div>
+     <div class="card" style="width: 300px; height: 540px; position: relative; left: 30%; top: 20px">
+      <img class="card-img-top" src="https://i.gifer.com/1lZ.gif" style="width: 300px; height:400px " alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title">Радио техника</h4>
+        <p class="card-text">
+          В этом отделе я рассказываю о своих успехаз в радио технике, которые я читал, и делюсь своим мнением
+        </p>
+        <a href="{% url 'comics' %}" style="position: relative; top: 10px;" class="btn btn-primary">Перейти</a>
+      </div>
+    </div>
+     <div class="card" style="width: 300px; height: 540px; position: relative; left: 40%; top: 20px">
+      <img class="card-img-top" src="https://i.gifer.com/IrBi.gif" style="width: 300px; height:320px " alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title">Программирование</h4>
+        <p class="card-text">
+          В этом отделе я рассказываю о своих достижениях в мире IT и делюсь своими проектами с вами
+        </p>
+        <a href="{% url 'comics' %}" style="position: relative; top: 10px;" class="btn btn-primary">Перейти</a>
+      </div>
+    </div>
+ </div>
 
 
 {% endblock %}
