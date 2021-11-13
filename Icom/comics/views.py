@@ -44,6 +44,6 @@ def number(request, num):
     for i in com:
         if i.id == num:
             n = i
-    print(n.json())
     li = [1, 2, 3, 4, 5]
+    ni = []
     return render(request, 'Comics/number.html', {'nomer': n, 'li': li})
