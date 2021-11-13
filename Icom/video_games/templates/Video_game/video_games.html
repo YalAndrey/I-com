@@ -1,0 +1,31 @@
+{% extends 'Isite/base.html' %}
+{% block contend %}
+{% load static %}
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</a>
+
+  {% for j in vi_ga %}
+         <div style="    grid-gap: 1px;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        justify-items: center;">
+        {% for i in j%}
+        {% if i.cover %}
+             <div style="width: 250px; height: 350px; position: relative; left: 5%">
+                <div>
+                    <a href="{% url 'game' i.id %}"><img src="{{ i.cover.url }}" alt="фото" style="width: 200px; height: 300px"/>
+                        <p class="text-muted"> {{i.title}} </p></a>
+                </div>
+             </div>
+        {% endif%}
+        {% endfor %}
+        </div>
+        <br>
+    {% endfor %}
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}

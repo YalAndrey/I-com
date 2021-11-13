@@ -19,7 +19,7 @@ def comics(request):
                 if comicse.mark >= mark and ((
                         (comicse.isdatel == 'marvel' and marvel) or (comicse.isdatel == 'dark_horse' and dark_horse)
                         or (comicse.isdatel == 'dc' and dc) or (comicse.isdatel == 'bubble' and bubble) or (
-                                comicse.isdatel == 'other ' and other)) or all([not marvel, not dc, not bubble, not dark_horse, not other])):
+                                comicse.isdatel == 'other' and other)) or all([not marvel, not dc, not bubble, not dark_horse, not other])):
                     com1.append(comicse)
             com = com1
 
@@ -44,5 +44,6 @@ def number(request, num):
     for i in com:
         if i.id == num:
             n = i
+    print(n.json())
     li = [1, 2, 3, 4, 5]
     return render(request, 'Comics/number.html', {'nomer': n, 'li': li})

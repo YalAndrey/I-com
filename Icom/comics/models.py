@@ -2,10 +2,10 @@ from django.db import models
 
 
 class Comics(models.Model):
-    image_one = models.ImageField(upload_to='img/')
-    image_two = models.ImageField(upload_to='img/')
+    image_one = models.ImageField(upload_to='img/comics/')
+    image_two = models.ImageField(upload_to='img/comics/')
     title = models.TextField(max_length=60)
-    isdatel = models.TextField(max_length=60)
+    isdatel = models.TextField(max_length=60, default='other')
     mark = models.IntegerField()
     description = models.TextField()
 
